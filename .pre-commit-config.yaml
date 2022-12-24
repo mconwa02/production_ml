@@ -1,0 +1,20 @@
+repos:
+-   repo: local
+    hooks:
+    -   id: black
+        name: black formatting
+        entry: black
+        language: python
+    -   id: isort
+        name: check imports
+        entry: isort
+        language: python
+    -   id: mypy
+        name: test doc strings etc
+        entry: mypy
+        language: python
+    -   id: flake8
+        name: file formatting
+        entry: flake8
+        language: python
+        exclude: ".md"
