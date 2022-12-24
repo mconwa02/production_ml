@@ -1,0 +1,41 @@
+[project]
+name = "production_ml"
+description = "production_ml example package"
+version = "0.1.0"
+requires-python = ">=3.11"
+authors = [
+    { name = "Michelle Conway", email = "conwaymichellemarie@gmail.com" }
+]
+
+dependencies = [
+    "pandas",
+    "numpy",
+    "pyspark[ml]",
+    "statsmodels",
+    "sklearn",
+    "pytest"
+]
+
+[project.optional-dependencies]
+dev = [
+    "tox",
+    "pre-commit"
+]
+
+[tool.flake8]
+max-line-length = 79
+
+[tool.isort]
+profile = "black"
+remove_imports = ["os", "json"]
+
+[tool.black]
+max-line-length = 79
+
+[tool.mypy]
+warn_return_any = true
+warn_unused_configs = true
+
+[build-system]
+requires = ["setuptools", "wheel"]
+
