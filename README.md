@@ -1,13 +1,13 @@
 # production_ml
-Machine learning models and methods to a production standard 
+Machine learning models and methods to a production standard. 
 
 The source files are in the src directory, that must be installed as a 
 package before tests can run. This is to prevent tools like pytest incidentally 
 importing it.
 
-*module* – a module is a file containing Python functions.
+*module* a module is a file containing Python functions.
 
-*package* – a package is a collection of modules intended to be installed and
+*package* a package is a collection of modules intended to be installed and
  used together.
 
 ## Virtual Environment
@@ -19,7 +19,7 @@ Then install the project locally run this:
 
 `pip install -e .`
 
-If you don’t install locally then the tests won’t run
+If you don't install locally then the tests won't run
 because the package will not be installed.
 
 ## What is pyproject.toml?
@@ -29,9 +29,9 @@ and a setup.py file is no longer needed for editable installation using pip.
 
 TOML stands for Tom's Obvious, Minimal Language.
 
-## Pre-Commit hooks 
+## Pre-Commit hooks
 
-Install dev packeages `pip install -e . [dev]`
+Install dev packages `pip install -e . [dev]`
 
 Use pre-commit hooks, once it's installed from the 
 [pre-commit-config.yaml](.pre-commit-config.yaml) in the repository:

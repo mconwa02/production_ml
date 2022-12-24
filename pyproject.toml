@@ -1,9 +1,11 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+
 [project]
 name = "production_ml"
-description = "production_ml example package"
 version = "0.1.0"
-requires-python = "3.11"
-authors = [
+requires-python = ">=3.11"
+author = [
     { name = "Michelle Conway", email = "conwaymichellemarie@gmail.com" }
 ]
 
@@ -43,6 +45,4 @@ max-line-length = 79
 warn_return_any = true
 warn_unused_configs = true
 
-[build-system]
-requires = ["setuptools", "wheel"]
 
