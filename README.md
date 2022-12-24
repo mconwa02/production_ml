@@ -41,3 +41,11 @@ Then run `pre-commit install`
 Avoid using args in the hook in [pre-commit-config.yaml]. Instead, store
 necessary configuration in [pyproject.toml](pyproject.toml) for consistently
 for your project. 
+
+## MkDocs
+
+Set up for the repo using https://www.mkdocs.org/getting-started/#creating-a-new-project
+
+Activate virtual environment, run the `mkdocs serve` command:
+
+Open up http://127.0.0.1:8000/ in browser
