@@ -7,7 +7,7 @@
 
 Checklist
 
-[ ] All function unit tested
-[ ] Doc strings added and update
-[ ] Unit tests pass
-[ ] commit hooks applies
+- [ ] All function unit tested
+- [ ] Doc strings added and update
+- [ ] Unit tests pass
+- [ ] commit hooks applies
