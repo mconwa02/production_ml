@@ -48,15 +48,19 @@ Create and manage project pages documentation in ![mkdocs.yaml](mkdocs.yml)
 
 Set up for the repo using https://www.mkdocs.org/getting-started/#creating-a-new-project
 
+### serve docs locally
+
 Activate virtual environment, run the `mkdocs serve` command to locally run:
 
 Open up http://127.0.0.1:8000/ in browser
 
+### serve docs remotely 
+
 Deploy Mk documentation by creating a documentation site that only uses static
 files to host. Simply upload the contents of the entire site directory.
 
-`mkdocs build`
+Step 1) `mkdocs build`
 
 To deploy projects pages sites to a branch within GHE project repo (gh-pages)
 
-`mkdocs gh-deploy`
+Step 2) `mkdocs gh-deploy`
