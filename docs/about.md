@@ -1,5 +1,7 @@
 # This project structure 
 
+This repo will have the following elements
+
 ## Pipeline Components
 
 - preprocessing 

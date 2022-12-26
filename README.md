@@ -49,3 +49,8 @@ Set up for the repo using https://www.mkdocs.org/getting-started/#creating-a-new
 Activate virtual environment, run the `mkdocs serve` command:
 
 Open up http://127.0.0.1:8000/ in browser
+
+Deploy Mk documentation by creating a documentation site that only uses static
+files to host. Simply upload the contents of the entire site directory.
+
+`mkdocs build`

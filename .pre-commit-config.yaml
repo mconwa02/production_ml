@@ -5,6 +5,7 @@ repos:
         name: black formatting
         entry: black
         language: python
+        exclude: ".md"
     -   id: isort
         name: check imports
         entry: isort
@@ -17,4 +18,10 @@ repos:
         name: file formatting
         entry: flake8
         language: python
-        exclude: ".md"
+        exclude = ''
+        /(
+            \.md
+          | \.yaml
+        )\
+        ''
+        exclude: [".md", ".yaml"]
