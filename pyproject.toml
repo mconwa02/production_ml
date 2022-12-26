@@ -44,6 +44,7 @@ remove_imports = ["os", "json"]
 
 [tool.black]
 max-line-length = 79
+exclude = """.md"""
 
 [tool.mypy]
 warn_return_any = true
