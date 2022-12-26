@@ -2,11 +2,13 @@
 
 ## Pipeline Components
 
-- pre-processing 
+- preprocessing 
 - feature engineering 
 - supervised methods
 - unsupervised methods 
 - re-enforcement learning 
 - supervised metrics
 - unsupervised metrics 
+
+
  
