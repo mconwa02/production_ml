@@ -17,4 +17,3 @@ repos:
         name: file formatting
         entry: flake8
         language: python
-        exclude: ".md"

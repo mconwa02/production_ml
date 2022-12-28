@@ -6,6 +6,7 @@ name = "production_ml"
 version = "0.1.0"
 requires-python = ">=3.11"
 author = [
+authors = [
     { name = "Michelle Conway", email = "conwaymichellemarie@gmail.com" }
 ]
 
@@ -19,6 +20,8 @@ dependencies = [
     "statsmodels",
     "sklearn",
     "pytest"
+    "pytest",
+    "kaggle"
 ]
 
 [project.optional-dependencies]
@@ -31,6 +34,10 @@ dev = [
     "mypy"
 ]
 
+docs = [
+    "mkdocs"
+]
+
 [tool.flake8]
 max-line-length = 79
 
@@ -40,6 +47,7 @@ remove_imports = ["os", "json"]
 
 [tool.black]
 max-line-length = 79
+exclude = """.md"""
 
 [tool.mypy]
 warn_return_any = true

@@ -1,0 +1,10 @@
+site_name: Production ML
+site_url: https://example.com/
+
+nav:
+    - Home: index.md
+    - About: about.md
+      
+theme:
+    name: readthedocs
+    nav_style: dark
