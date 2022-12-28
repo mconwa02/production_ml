@@ -18,7 +18,8 @@ dependencies = [
     "pyspark[ml]",
     "statsmodels",
     "sklearn",
-    "pytest"
+    "pytest",
+    "kaggle"
 ]
 
 [project.optional-dependencies]

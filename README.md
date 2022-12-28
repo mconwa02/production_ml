@@ -42,6 +42,19 @@ Avoid using args in the hook in [pre-commit-config.yaml]. Instead, store
 necessary configuration in [pyproject.toml](pyproject.toml) for consistently
 for your project. 
 
+## Data
+
+The data was obtained from the 
+[Kaggle API](https://github.com/Kaggle/kaggle-api#api-credentials)
+ by installing kaggle python package (included in toml file) using the command
+  line: 
+
+`pip install kaggle`
+
+The coffee kaggle dataset was download via Kaggle API using:
+
+`kaggle datasets download -d michals22/coffee-dataset`
+
 ## MkDocs
 
 Create and manage project pages documentation in ![mkdocs.yaml](mkdocs.yml)
