@@ -6,7 +6,6 @@ name = "production_ml"
 version = "0.1.0"
 requires-python = ">=3.11"
 author = [
-authors = [
     { name = "Michelle Conway", email = "conwaymichellemarie@gmail.com" }
 ]
 
@@ -19,9 +18,9 @@ dependencies = [
     "pyspark[ml]",
     "statsmodels",
     "sklearn",
-    "pytest"
     "pytest",
-    "kaggle"
+    "kaggle",
+    "pyarrow"
 ]
 
 [project.optional-dependencies]
@@ -39,14 +38,14 @@ docs = [
 ]
 
 [tool.flake8]
-max-line-length = 79
+max-line-length = 89
 
 [tool.isort]
 profile = "black"
 remove_imports = ["os", "json"]
 
 [tool.black]
-max-line-length = 79
+max-line-length = 89
 exclude = """.md"""
 
 [tool.mypy]
