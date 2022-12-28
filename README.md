@@ -77,3 +77,15 @@ Step 1) `mkdocs build`
 To deploy projects pages sites to a branch within GHE project repo (gh-pages)
 
 Step 2) `mkdocs gh-deploy`
+
+
+## JupyterLab Notebooks
+
+Create a kernel for notebook, by `pip install ipykernel` on virtual 
+environment and active environment
+
+`source prod_ml\scripts\activate`
+
+`python -m ipykernel install --name prod_ml`
+
+https://nbviewer.org/

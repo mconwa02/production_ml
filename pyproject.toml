@@ -20,7 +20,10 @@ dependencies = [
     "sklearn",
     "pytest",
     "kaggle",
-    "pyarrow"
+    "pyarrow",
+    "jupyterlab",
+    "ipykernel"
+
 ]
 
 [project.optional-dependencies]
