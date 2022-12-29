@@ -5,6 +5,7 @@ repos:
         name: black formatting
         entry: black
         language: python
+        args: ["--line-length=78"]
     -   id: isort
         name: check imports
         entry: isort
@@ -17,3 +18,4 @@ repos:
         name: file formatting
         entry: flake8
         language: python
+        args: ["--max-line-length=78"]
