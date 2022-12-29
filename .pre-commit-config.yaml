@@ -18,4 +18,4 @@ repos:
         name: file formatting
         entry: flake8
         language: python
-        args: ["--max-line-length=78"]
+        args: ["--max-line-length=78", "--ignore=E999,E501"]

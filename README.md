@@ -78,7 +78,6 @@ To deploy projects pages sites to a branch within GHE project repo (gh-pages)
 
 Step 2) `mkdocs gh-deploy`
 
-
 ## JupyterLab Notebooks
 
 Create a kernel for notebook, by `pip install ipykernel` on virtual 
