@@ -21,8 +21,15 @@ For more details visit about
 
 ## Pipeline Components
 
+- data import
+- table schemas
 - preprocessing 
 - feature engineering 
+- feature selection
+  - VIF
+  - spearman correlation 
+  - pearson correlation 
+  - Mutual Information 
 - supervised methods
 - unsupervised methods 
 - re-enforcement learning 
