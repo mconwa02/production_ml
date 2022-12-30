@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from components.data_import.utils import read_csv_write_parquet
+from components.data_import.utils import read_from_csv_and_write_to_parquet
 
 DATA_PATH = Path(r"C:\dev\data\prod_ml\coffee-dataset")
 print(DATA_PATH)
@@ -15,10 +15,20 @@ coffee_tables = {
     "Coffee_re_export": "coffee_re_export",
 }
 
+coffee_tables = {
+    "coffee_domestic_consumption",
+    "coffee_export",
+    "coffee_green_coffee_inventorie",
+    "coffee_import",
+    "coffee_importers_consumption",
+    "coffee_production",
+    "coffee_re_export",
+}
+
 
 def main():
-    for name in coffee_tables.keys():
-        read_csv_write_parquet(DATA_PATH, name)
+    for name in coffee_tables:
+        read_from_csv_and_write_to_parquet(DATA_PATH, name)
 
 
 if __name__ == "__main__":
