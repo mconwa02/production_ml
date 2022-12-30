@@ -1,5 +1,5 @@
 site_name: Production ML
-site_url: https://example.com/
+site_url:  https://mconwa02.github.io/production_ml/
 
 nav:
     - Home: index.md

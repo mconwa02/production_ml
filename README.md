@@ -68,11 +68,13 @@ The coffee kaggle dataset was download via Kaggle API using:
 
 `kaggle datasets download -d michals22/coffee-dataset`
 
-## MkDocs
+## Documentation 
 
-Create and manage project pages documentation in ![mkdocs.yaml](mkdocs.yml)
+Documentation build using MkDocs manage project pages documentation in !
+[mkdocs.yaml](mkdocs.yml)
 
-Set up for the repo using https://www.mkdocs.org/getting-started/#creating-a-new-project
+MkDocs Set up in the repo using https://www.mkdocs.
+org/getting-started/#creating-a-new-project
 
 ### serve docs locally
 
