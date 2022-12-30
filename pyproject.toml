@@ -7,7 +7,7 @@ authors = [
 ]
 license = "BSD-3-Clause"
 readme = "README.md"
-documentation = "https://python-poetry.org/docs/"
+documentation = " https://mconwa02.github.io/production_ml/"
 
 
 [tool.poetry.dependencies]
