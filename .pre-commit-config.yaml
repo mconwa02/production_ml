@@ -5,15 +5,13 @@ repos:
         name: black formatting
         entry: black
         language: python
+        args: ["--line-length=78"]
     -   id: isort
         name: check imports
         entry: isort
-        language: python
-    -   id: mypy
-        name: test doc strings etc
-        entry: mypy
         language: python
     -   id: flake8
         name: file formatting
         entry: flake8
         language: python
+        args: ["--max-line-length=78", "--ignore=E999,E501"]

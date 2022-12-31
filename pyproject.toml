@@ -1,56 +1,55 @@
-[build-system]
-requires = ["setuptools", "wheel"]
-
-[project]
+[tool.poetry]
 name = "production_ml"
 version = "0.1.0"
-requires-python = ">=3.11"
-author = [
+description = "A short description of the package."
 authors = [
-    { name = "Michelle Conway", email = "conwaymichellemarie@gmail.com" }
+    "Michelle Conway <conwaymichellemarie@gmail.com>"
 ]
-
-[tool.poetry]
+license = "BSD-3-Clause"
 readme = "README.md"
+documentation = " https://mconwa02.github.io/production_ml/"
 
-dependencies = [
-    "pandas",
-    "numpy",
-    "pyspark[ml]",
-    "statsmodels",
-    "sklearn",
-    "pytest"
-    "pytest",
-    "kaggle"
-]
 
-[project.optional-dependencies]
-dev = [
-    "tox",
-    "pre-commit",
-    "flake8",
-    "isort",
-    "black",
-    "mypy"
-]
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "1.5.2"
+numpy = "1.24.0"
+statsmodels = "0.13.5"
+scikit-learn = "1.2.0"
+kaggle = "1.5.12"
+pyarrow = "10.0.1"
+jupyterlab = "3.5.2"
+ipykernel = "6.19.4"
+schema = "0.7.5"
+pandera = "*"
 
-docs = [
-    "mkdocs"
-]
+[tool.poetry.group.dev.dependencies]
+tox = "4.1.1"
+pre-commit = "*"
+flake8 = "*"
+isort = "*"
+black = "*"
+mypy = "*"
+
+[tool.poetry.group.test.dependencies]
+pytest = "7.2.0"
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "1.4.2"
+
+[tool.black]
+line-length = 79
+exclude = """.md"""
 
 [tool.flake8]
+ignore = "E501, E999"
 max-line-length = 79
+max-complexity = 18
 
 [tool.isort]
 profile = "black"
 remove_imports = ["os", "json"]
 
-[tool.black]
-max-line-length = 79
-exclude = """.md"""
-
-[tool.mypy]
-warn_return_any = true
-warn_unused_configs = true
-
-
+[build-system]
+requires = ["poetry-core>=1.1.0"]
+build-backend = "poetry.core.masonry.api"

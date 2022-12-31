@@ -15,6 +15,10 @@ importing it.
 The virtual environment for this repo was created using a 
 [pyproject.toml](pyproject.toml)  file
 
+`poerty install`
+
+`poerty build`
+
 Then install the project locally run this:
 
 `pip install -e .`
@@ -29,18 +33,27 @@ and a setup.py file is no longer needed for editable installation using pip.
 
 TOML stands for Tom's Obvious, Minimal Language.
 
+When a toml script is added or updated, run `poetry install` to make them 
+available in virtual env.
+
 ## Pre-Commit hooks
 
-Install dev packages `pip install -e . [dev]`
+Install dev packages `poetry install --with dev`
+
+hen a script is added or updated, run poetry install to make them available
+in the project’s virtualenv.
 
 Use pre-commit hooks, once it's installed from the 
 [pre-commit-config.yaml](.pre-commit-config.yaml) in the repository:
 
-Then run `pre-commit install`
+To set up the git hook run `pre-commit install`
 
 Avoid using args in the hook in [pre-commit-config.yaml]. Instead, store
 necessary configuration in [pyproject.toml](pyproject.toml) for consistently
 for your project. 
+
+Can build project using `pip -m build . --wheel`or  with editable 
+`install with pip install -e .`
 
 ## Data
 
@@ -55,11 +68,13 @@ The coffee kaggle dataset was download via Kaggle API using:
 
 `kaggle datasets download -d michals22/coffee-dataset`
 
-## MkDocs
+## Documentation 
 
-Create and manage project pages documentation in ![mkdocs.yaml](mkdocs.yml)
+Documentation build using MkDocs manage project pages documentation in !
+[mkdocs.yaml](mkdocs.yml)
 
-Set up for the repo using https://www.mkdocs.org/getting-started/#creating-a-new-project
+MkDocs Set up in the repo using https://www.mkdocs.
+org/getting-started/#creating-a-new-project
 
 ### serve docs locally
 
@@ -77,3 +92,16 @@ Step 1) `mkdocs build`
 To deploy projects pages sites to a branch within GHE project repo (gh-pages)
 
 Step 2) `mkdocs gh-deploy`
+
+Your documentation is available at: https://mconwa02.github.io/production_ml/
+
+## JupyterLab Notebooks
+
+Create a kernel for notebook, by `pip install ipykernel` on virtual 
+environment and active environment
+
+`source prod_ml\scripts\activate`
+
+`python -m ipykernel install --name prod_ml`
+
+https://nbviewer.org/
