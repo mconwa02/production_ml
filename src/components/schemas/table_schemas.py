@@ -1,6 +1,6 @@
 from enum import Enum
 
-from schema import Schema
+from pandera import Column, DataFrameSchema
 
 
 class ImportTables(Enum):
@@ -13,96 +13,126 @@ class ImportTables(Enum):
     RE_EXPORT = "coffee_re_export"
 
 
-DOMESTIC_CONSUMPTION_SCHEMA = Schema(
+DOMESTIC_CONSUMPTION_SCHEMA = DataFrameSchema(
     {
-        "Country": str,
-        "Coffee type": object,
-        "1990/91": int,
-        "1991/92": int,
-        "1992/93": int,
-        "1993/94": int,
-        "1994/95": int,
-        "1995/96": int,
-        "1996/97": int,
-        "1997/98": int,
-        "1998/99": int,
-        "1999/00": int,
-        "2000/01": int,
-        "2001/02": int,
-        "2002/03": int,
-        "2003/04": int,
-        "2004/05": int,
-        "2005/06": int,
-        "2006/07": int,
-        "2007/08": int,
-        "2008/09": int,
-        "2009/10": int,
-        "2010/11": int,
-        "2011/12": int,
-        "2012/13": int,
-        "2013/14": int,
-        "2014/15": int,
-        "2015/16": int,
-        "2016/17": int,
-        "2017/18": int,
-        "2018/19": int,
-        "2019/20": int,
-        "Total_domestic_consumption": int,
+        "Country": Column(str),
+        "Coffee type": Column(object),
+        "1990/91": Column(int),
+        "1991/92": Column(int),
+        "1992/93": Column(int),
+        "1993/94": Column(int),
+        "1994/95": Column(int),
+        "1995/96": Column(int),
+        "1996/97": Column(int),
+        "1997/98": Column(int),
+        "1998/99": Column(int),
+        "1999/00": Column(int),
+        "2000/01": Column(int),
+        "2001/02": Column(int),
+        "2002/03": Column(int),
+        "2003/04": Column(int),
+        "2004/05": Column(int),
+        "2005/06": Column(int),
+        "2006/07": Column(int),
+        "2007/08": Column(int),
+        "2008/09": Column(int),
+        "2009/10": Column(int),
+        "2010/11": Column(int),
+        "2011/12": Column(int),
+        "2012/13": Column(int),
+        "2013/14": Column(int),
+        "2014/15": Column(int),
+        "2015/16": Column(int),
+        "2016/17": Column(int),
+        "2017/18": Column(int),
+        "2018/19": Column(int),
+        "2019/20": Column(int),
+        "Total_domestic_consumption": Column(int),
     }
 )
 
-COMMON_SCHEMA = Schema(
+YEAR_SCHEMA = DataFrameSchema(
     {
-        "Country": object,
-        "1990": int,
-        "1991": int,
-        "1992": int,
-        "1993": int,
-        "1994": int,
-        "1995": int,
-        "1996": int,
-        "1997": int,
-        "1998": int,
-        "1999": int,
-        "2000": int,
-        "2001": int,
-        "2002": int,
-        "2003": int,
-        "2004": int,
-        "2005": int,
-        "2006": int,
-        "2007": int,
-        "2008": int,
-        "2009": int,
-        "2010": int,
-        "2011": int,
-        "2012": int,
-        "2013": int,
-        "2014": int,
-        "2015": int,
-        "2016": int,
-        "2017": int,
-        "2018": int,
-        "2019": int,
+        "Country": Column(object),
+        "1990": Column(int),
+        "1991": Column(int),
+        "1992": Column(int),
+        "1993": Column(int),
+        "1994": Column(int),
+        "1995": Column(int),
+        "1996": Column(int),
+        "1997": Column(int),
+        "1998": Column(int),
+        "1999": Column(int),
+        "2000": Column(int),
+        "2001": Column(int),
+        "2002": Column(int),
+        "2003": Column(int),
+        "2004": Column(int),
+        "2005": Column(int),
+        "2006": Column(int),
+        "2007": Column(int),
+        "2008": Column(int),
+        "2009": Column(int),
+        "2010": Column(int),
+        "2011": Column(int),
+        "2012": Column(int),
+        "2013": Column(int),
+        "2014": Column(int),
+        "2015": Column(int),
+        "2016": Column(int),
+        "2017": Column(int),
+        "2018": Column(int),
+        "2019": Column(int),
     }
 )
 
-COFFEE_EXPORT_SCHEMA = Schema({**COMMON_SCHEMA.schema, "Total_export": int})
+EXPORT_SCHEMA = YEAR_SCHEMA.add_columns({"Total_export": Column(int)})
 
-COFFEE_INVENTORIE_SCHEMA = Schema(
-    {**COMMON_SCHEMA.schema, "Total_inventorie": int}
+INVENTORIE_SCHEMA = YEAR_SCHEMA.add_columns({"Total_inventorie": Column(int)})
+
+IMPORTERS_CONSUMPTION_SCHEMA = YEAR_SCHEMA.add_columns(
+    {"Total_import_consumption": Column(int)}
 )
 
-COFFEE_IMPORT_SCHEMA = Schema({**COMMON_SCHEMA.schema, "Total_import": int})
+IMPORT_SCHEMA = YEAR_SCHEMA.add_columns({"Total_import": Column(int)})
 
-COFFEE_IMPORTERS_CONSUMPTION_SCHEMA = Schema(
-    {**COMMON_SCHEMA.schema, "Total_import_consumption": int}
+PRODUCTION_SCHEMA = DataFrameSchema(
+    {
+        "Country": Column(str),
+        "Coffee type": Column(object),
+        "1990/91": Column(float),
+        "1991/92": Column(float),
+        "1992/93": Column(float),
+        "1993/94": Column(float),
+        "1994/95": Column(float),
+        "1995/96": Column(float),
+        "1996/97": Column(float),
+        "1997/98": Column(float),
+        "1998/99": Column(float),
+        "1999/00": Column(float),
+        "2000/01": Column(float),
+        "2001/02": Column(float),
+        "2002/03": Column(float),
+        "2003/04": Column(float),
+        "2004/05": Column(float),
+        "2005/06": Column(float),
+        "2006/07": Column(float),
+        "2007/08": Column(float),
+        "2008/09": Column(float),
+        "2009/10": Column(float),
+        "2010/11": Column(float),
+        "2011/12": Column(float),
+        "2012/13": Column(float),
+        "2013/14": Column(float),
+        "2014/15": Column(float),
+        "2015/16": Column(float),
+        "2016/17": Column(float),
+        "2017/18": Column(float),
+        "2018/19": Column(float),
+        "2019/20": Column(float),
+        "Total_production": Column(float),
+    }
 )
 
-COFFEE_PRODUCTION_SCHEMA = Schema(
-    {**COMMON_SCHEMA.schema, "Total_production": int}
-)
-
-COFFEE_RE_EXPORT_SCHEMA = Schema(
-    {**COMMON_SCHEMA.schema, "Total_re_export": int}
-)
+RE_EXPORT_SCHEMA = YEAR_SCHEMA.add_columns({"Total_re_export": Column(int)})
