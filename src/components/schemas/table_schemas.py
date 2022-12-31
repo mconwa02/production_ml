@@ -3,7 +3,7 @@ from enum import Enum
 from pandera import Column, DataFrameSchema
 
 
-class ImportTables(Enum):
+class Tables(Enum):
     DOMESTIC_CONSUMPTION = "coffee_domestic_consumption"
     EXPORT = "coffee_export"
     INVENTORY = "coffee_green_coffee_inventorie"

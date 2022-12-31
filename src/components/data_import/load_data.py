@@ -9,7 +9,7 @@ from components.schemas.table_schemas import (
     INVENTORIE_SCHEMA,
     PRODUCTION_SCHEMA,
     RE_EXPORT_SCHEMA,
-    ImportTables,
+    Tables,
 )
 
 DATA_PATH = Path(r"C:\dev\data\prod_ml\coffee-dataset")
@@ -23,25 +23,25 @@ def load_coffee_data():
     return: tuple of seven pandas data frames
     """
     domestic_consumption_df = read_from_csv_and_write_to_parquet(
-        DATA_PATH, ImportTables.DOMESTIC_CONSUMPTION.value
+        DATA_PATH, Tables.DOMESTIC_CONSUMPTION.value
     )
     export_df = read_from_csv_and_write_to_parquet(
-        DATA_PATH, ImportTables.EXPORT.value
+        DATA_PATH, Tables.EXPORT.value
     )
     green_coffee_inventorie_df = read_from_csv_and_write_to_parquet(
-        DATA_PATH, ImportTables.INVENTORY.value
+        DATA_PATH, Tables.INVENTORY.value
     )
     importers_consumption_df = read_from_csv_and_write_to_parquet(
-        DATA_PATH, ImportTables.IMPORTERS_CONSUMPTION.value
+        DATA_PATH, Tables.IMPORTERS_CONSUMPTION.value
     )
     import_df = read_from_csv_and_write_to_parquet(
-        DATA_PATH, ImportTables.IMPORT.value
+        DATA_PATH, Tables.IMPORT.value
     )
     production_df = read_from_csv_and_write_to_parquet(
-        DATA_PATH, ImportTables.PRODUCTION.value
+        DATA_PATH, Tables.PRODUCTION.value
     )
     re_export_df = read_from_csv_and_write_to_parquet(
-        DATA_PATH, ImportTables.RE_EXPORT.value
+        DATA_PATH, Tables.RE_EXPORT.value
     )
 
     DOMESTIC_CONSUMPTION_SCHEMA.validate(domestic_consumption_df)
