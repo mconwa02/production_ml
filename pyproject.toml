@@ -49,12 +49,6 @@ max-complexity = 18
 profile = "black"
 remove_imports = ["os", "json"]
 
-[tool.mypy]
-files = "src"
-mypy_path = "src"
-warn_return_any = true
-warn_unused_configs = true
-
 [build-system]
 requires = ["poetry-core>=1.1.0"]
 build-backend = "poetry.core.masonry.api"

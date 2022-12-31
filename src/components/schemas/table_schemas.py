@@ -1,4 +1,17 @@
+from enum import Enum
+
 from schema import Schema
+
+
+class ImportTables(Enum):
+    DOMESTIC_CONSUMPTION = "coffee_domestic_consumption"
+    EXPORT = "coffee_export"
+    INVENTORY = "coffee_green_coffee_inventorie"
+    IMPORT = "coffee_import"
+    IMPORTERS_CONSUMPTION = "coffee_importers_consumption"
+    PRODUCTION = "coffee_production"
+    RE_EXPORT = "coffee_re_export"
+
 
 DOMESTIC_CONSUMPTION_SCHEMA = Schema(
     {
