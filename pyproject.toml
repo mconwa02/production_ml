@@ -21,6 +21,7 @@ pyarrow = "10.0.1"
 jupyterlab = "3.5.2"
 ipykernel = "6.19.4"
 schema = "0.7.5"
+pandera = "*"
 
 [tool.poetry.group.dev.dependencies]
 tox = "4.1.1"
