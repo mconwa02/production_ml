@@ -1,6 +1,7 @@
 from pathlib import Path
 
 from components.data_import.utils import read_from_csv_and_write_to_parquet
+from components.format_data.common import format_df_column_names
 from components.schemas.table_schemas import (
     DOMESTIC_CONSUMPTION_SCHEMA,
     EXPORT_SCHEMA,
@@ -51,6 +52,14 @@ def load_coffee_data():
     IMPORT_SCHEMA(import_df)
     PRODUCTION_SCHEMA.validate(production_df)
     RE_EXPORT_SCHEMA.validate(re_export_df)
+
+    domestic_consumption_df.pipe(format_df_column_names)
+    export_df.pipe(format_df_column_names)
+    green_coffee_inventorie_df.pipe(format_df_column_names)
+    importers_consumption_df.pipe(format_df_column_names)
+    import_df.pipe(format_df_column_names)
+    production_df.pipe(format_df_column_names)
+    re_export_df.pipe(format_df_column_names)
 
     return (
         domestic_consumption_df,
